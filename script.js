@@ -23,6 +23,7 @@ function addTask() {
     label.appendChild(checkBoxText);
     checkBoxText.classList.add("checkbox-text");
     checkBoxText.innerText = document.getElementById("task-input").value;
+    document.getElementById("task-input").value = "";
     closeIcon.addEventListener("click", () => {
       closeIcon.parentElement.remove();
     });
