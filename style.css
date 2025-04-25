@@ -67,7 +67,7 @@ input[type="text"] {
 
 .add-btn:hover {
   background-color: rgb(233, 85, 0);
-  width: 26%;
+  padding-left: 10px;
 }
 
 .task-list {
@@ -130,4 +130,8 @@ input[type="checkbox"]:checked ~ .checkbox-text {
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
+}
+
+.x-icon:hover {
+  color: red;
 }

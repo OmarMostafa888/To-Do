@@ -32,6 +32,13 @@ function addTask() {
   }
 }
 
-addBtn.addEventListener("click", () => {
-  addTask();
-});
+let taskInput = document.getElementById("task-input");
+
+function enterFunction(e) {
+  if (e.code === "Enter") {
+    addTask();
+  }
+}
+
+addBtn.addEventListener("click", addTask);
+taskInput.addEventListener("keydown", enterFunction);
