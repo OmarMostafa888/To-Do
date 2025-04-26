@@ -24,13 +24,9 @@ function addTask() {
     checkBoxText.classList.add("checkbox-text");
     checkBoxText.innerText = document.getElementById("task-input").value;
     document.getElementById("task-input").value = "";
-    ///////////////////////////////////////////////////////
-    for (let i = 0; i < taskList.children.length; i++) {
-      if (i === taskList.children.length - 1) {
-        localStorage.setItem(i, item.outerHTML);
-      }
-    }
-    ////////////////////////////////////////////
+    closeIcon.addEventListener("click", () => {
+      closeIcon.parentElement.remove();
+    });
   } else {
     alert("Please enter a task the contains at least 3 characters");
   }
@@ -46,5 +42,3 @@ function enterFunction(e) {
 
 addBtn.addEventListener("click", addTask);
 taskInput.addEventListener("keydown", enterFunction);
-
-getItems();
